@@ -100,8 +100,8 @@ public class LoginActivity extends AppCompatActivity
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                if ("1"==lg.Loginusername&&"1"==lg.Loginpassword)                      //如果用户名和密码正确
-         //       if(true)                                            //测试用，用于直接登录
+             //   if ("1"==lg.Loginusername&&"1"==lg.Loginpassword)                      //如果用户名和密码正确
+                if(true)                                            //测试用，用于直接登录
                 {
                     User.username=str_username;
                     editor = pref.edit();
@@ -120,7 +120,7 @@ public class LoginActivity extends AppCompatActivity
                     progress_login.setVisibility(View.VISIBLE);
                     timer.schedule(task,random.nextInt(900)+200);     //模拟登陆耗时
                 } else
-                    Toast.makeText(LoginActivity.this, "用户名或密码错误", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "无效的用户名或密码", Toast.LENGTH_SHORT).show();
             }
         });
     }
